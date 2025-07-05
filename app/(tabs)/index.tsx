@@ -1,12 +1,12 @@
-import { View, StyleSheet, Alert } from 'react-native';
-import * as ImagePicker from 'expo-image-picker';
 import Button from '@/components/Button';
-import ImageViewer from '@/components/ImageViewer';
-import { useState } from 'react'; 
-import IconButton from '@/components/IconButton';
 import CircleButton from '@/components/CircleButton';
+import IconButton from '@/components/IconButton';
+import ImageViewer from '@/components/ImageViewer';
 import VibrationList from '@/components/VibrationList';
-
+import VibrationPicker from '@/components/VibrationPicker';
+import * as ImagePicker from 'expo-image-picker';
+import { useState } from 'react';
+import { Alert, StyleSheet, View } from 'react-native';
 const PlaceholderImage = require('@/assets/images/background-image.png');
 
 export default function Index() {

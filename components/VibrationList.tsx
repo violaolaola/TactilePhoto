@@ -1,14 +1,14 @@
-import { useState } from 'react';
-import { ImageSourcePropType, StyleSheet, FlatList, Platform, Pressable } from 'react-native';
 import { Image } from 'expo-image';
+import { useState } from 'react';
+import { FlatList, ImageSourcePropType, Platform, Pressable, StyleSheet } from 'react-native';
 
 type Props = {
   onSelect: (image: ImageSourcePropType) => void;
   onCloseModal: () => void;
 };
 
-export default function EmojiList({ onSelect, onCloseModal }: Props) {
-  const [emoji] = useState<ImageSourcePropType[]>([
+export default function VibrationList({ onSelect, onCloseModal }: Props) {
+  const [vibration] = useState<ImageSourcePropType[]>([
     require("../assets/images/emoji1.png"),
     require("../assets/images/emoji2.png"),
     require("../assets/images/emoji3.png"),
@@ -21,7 +21,7 @@ export default function EmojiList({ onSelect, onCloseModal }: Props) {
     <FlatList
       horizontal
       showsHorizontalScrollIndicator={Platform.OS === 'web'}
-      data={emoji}
+      data={vibration}
       contentContainerStyle={styles.listContainer}
       renderItem={({ item, index }) => (
         <Pressable
